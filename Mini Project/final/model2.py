@@ -130,7 +130,7 @@ class Generator(nn.Module):
         # Output layer
         self.output = nn.Sequential(
             nn.Conv2d(64, 3, kernel_size=7, padding=3),
-            nn.Tanh()
+            nn.Tanh() # used Tanh activation for better convergence
         )
         
     def forward(self, x):
